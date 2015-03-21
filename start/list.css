@@ -1,0 +1,89 @@
+#main-box {
+	background-color: #299FEE;
+}
+#main-box:not(.on) #interests-form-box,#main-box:not(.on) #interests-form-buttons {
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+#interests-form-box {
+	height: 100%;
+	width: 100%;
+	background: #299FEE;
+	padding-top: 80px;
+	-webkit-box-sizing: border-box;
+	transition: opacity 0.3s 0.3s;
+}
+#interests-form-form {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto';
+	font-size: 44px;
+	color: #FFFFFF;
+	-webkit-box-sizing: border-box;
+	overflow-y: auto;
+}
+input[type=checkbox] {
+	visibility: hidden;
+	display: none;
+}
+#interests-form-form input[type=checkbox]:checked + label {
+	background: #0073C2;
+}
+#label-margin-bottom {
+	margin-bottom: 100px;
+}
+#interests-form-form label {
+	display: block;
+	width: auto;
+	height: 60px;
+	padding-right: 40px;
+	padding-left: 40px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	background: transparent;
+}
+#interests-form-buttons {
+	transition: opacity 0.3s 0.3s;
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	width: auto;
+	height: 100px;
+	z-index: 10;
+}
+#interests-form-buttons button {
+	border: none;
+	font-family: 'Roboto';
+	font-weight: bold;
+	font-size: 26px;
+	color: #FFFFFF;
+	outline: none;
+	float: right;
+	width: 100px;
+	height: 100%;
+	border-radius: 50%;
+	transition: background-color 0.2s;
+}
+#interests-form-button-all {
+	background-color: #8B8B8B;
+}
+#interests-form-button-all:hover {
+	background-color: #727272;
+}
+#interests-form-button-all:active {
+	background-color: #4E4E4E;
+}
+#interests-form-button-ok {
+	background-color: #25DA49;
+	margin-left: 16px;
+}
+#interests-form-button-ok:hover {
+	background-color: #10C735;
+}
+#interests-form-button-ok:active {
+	background-color: #05A826;
+}

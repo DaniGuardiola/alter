@@ -1,0 +1,76 @@
+#slide-box {
+	overflow: hidden;
+}
+.slide {
+	transition: height 0.4s;
+}
+@media screen and (max-width: 600px) and (max-height: 600px){
+	.slide p, #letsgetout-button {
+		top: 20%;
+	}
+}
+@media screen and (max-width: 600px) and (min-height: 600px){
+	.slide p, #letsgetout-button {
+		top: 175px;
+	}
+}
+.slide p {
+	opacity: 100;
+	transition: opacity 0.3s 0.3s;
+	font-family: 'Roboto';
+	font-size: 44px;	
+	position: relative;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 0 30px;
+	text-shadow: 1px 3px 6px rgba(150, 150, 150, 1);
+}
+.slide:not(.on) {
+	height: 0%;
+	z-index: -1;
+}
+.slide:not(.on) p {
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+.slide:not(.on) img, .slide:not(.on) button {
+	display: none;
+}
+.alter-logo-font {
+	font-weight: bold;
+}
+#slide-welcome {
+	background: #44FC8E;
+}
+#slide-firsttext {
+	background: #29A5F8;
+}
+#slide-principles {
+	background: #FFAC30;
+}
+#slide-letsgetout {
+	background: #13E9E1;
+}
+#letsgetout-button {
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	height: 100px;
+	margin-top: 24px;
+	border: none;
+	background: #2877DB;
+	color: #FFFFFF;
+	font-family: 'Roboto';
+	font-size: 28px;
+	font-weight: bold;
+	border-radius: 50%;
+	transition: background 0.2s;
+	outline: none;
+}
+#letsgetout-button:hover {
+	background: #1A55A0;
+}
+#letsgetout-button:active {
+	background: #0D3B75;

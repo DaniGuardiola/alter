@@ -1,0 +1,41 @@
+<html><head><title>Timer con Javascript</title>
+
+<script type="text/javascript">
+
+    var        Handle_Mi_Timer = null;
+    var        Contador = 0;
+
+    function Iniciar_Timer() {
+        Contador = 0;
+        Actualizar_Texto_Status_Timer(Contador);
+        Handle_Mi_Timer = window.setInterval('Mi_Timer()', 1000);  // en milisegundos, 1000=1 segundo
+    }
+
+    function Detener_Timer() {
+        if(Handle_Mi_Timer!=null) {
+            window.clearInterval(Handle_Mi_Timer);
+            Handle_Mi_Timer = null;
+            Actualizar_Texto_Status_Timer("Timer detenido");
+        }
+    }
+
+    function Actualizar_Texto_Status_Timer(Texto) {
+        document.getElementById("Status_Timer").innerHTML = Texto;
+    }
+
+    function Mi_Timer() {
+        Contador++;
+        Actualizar_Texto_Status_Timer(Contador);
+    }
+</script>
+
+</head>
+<body>
+
+<div id="Status_Timer">Timer detenido</div>
+<br>
+<br>
+<input type="button" value="Iniciar Timer" onclick="Iniciar_Timer()">
+<input type="button" value="Detener Timer" onclick="Detener_Timer()">
+
+</body></html>
